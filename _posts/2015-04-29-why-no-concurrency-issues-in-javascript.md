@@ -1,5 +1,10 @@
 ---
 published: true
+layout: post
+title: "Every wondered why there are no concurrency issues in javascript?"
+description: ""
+category: null
+tags: []
 ---
 
 ## Ever wondered why there are no concurrency issues in javascript?

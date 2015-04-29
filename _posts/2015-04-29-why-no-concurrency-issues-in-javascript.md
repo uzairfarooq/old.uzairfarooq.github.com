@@ -9,7 +9,7 @@ tags: []
 
 Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
 
-{% highlight ruby %}
+{% highlight javascript %}
 1  var pending = [];
 
 2  document.getElementById("submitBtn").addEventListener(function() {

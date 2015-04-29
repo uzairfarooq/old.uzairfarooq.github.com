@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 
 ## Ever wondered why there are no concurrency issues in javascript?

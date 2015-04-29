@@ -7,7 +7,7 @@ category: null
 tags: []
 ---
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+Consider the code snippet:
 
 {% highlight javascript %}
 var pending = [];

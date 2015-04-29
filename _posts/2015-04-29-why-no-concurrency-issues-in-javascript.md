@@ -9,7 +9,7 @@ tags: []
 
 Consider the code snippet:
 
-{% highlight javascript %}
+{% highlight javascript linenos %}
 var pending = [];
 
 document.getElementById("submitBtn").addEventListener(function() {

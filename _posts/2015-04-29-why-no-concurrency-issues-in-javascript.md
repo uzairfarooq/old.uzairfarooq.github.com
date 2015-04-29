@@ -7,8 +7,6 @@ category: null
 tags: []
 ---
 
-## Ever wondered why there are no concurrency issues in javascript?
-
 Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
 ```javascript
 1  var pending = [];

@@ -27,8 +27,6 @@ author :
 #
 production_url : http://uzairfarooq.github.io
 
-markdown : redcarpet2
-
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :

@@ -7,7 +7,7 @@ category: null
 tags: []
 ---
 
-Ever wondered all the concurrency issues you were warned about in School don't apply to javascript?
+Ever wondered why all the concurrency issues you were warned about in School don't apply to javascript?
 
 Lets consider the code snippet:
 
@@ -15,8 +15,7 @@ Lets consider the code snippet:
 var pending = [];
 
 document.getElementById("submitBtn").addEventListener(function() {
-    var val = document.getElementById("textBox").value;
-    pending.push(val);
+    pending.push(document.getElementById("textBox").value);
 });
 
 setInterval(function() {
@@ -26,8 +25,6 @@ setInterval(function() {
 
 {% endhighlight %}
 
-Suppose line 7 gets executed and suddenly the event gets pre-empted to process the event at line 3. After executing line 3 & 4, the previous event is resumed from line 8. Now when line 8 gets executed, the newly added value in pending will be lost because it's neither processed by processValues function not it's in the pending array.
+Suppose line 9 `processValues(pending)` gets executed and processes the pending values but before preceeding to next line it gets pre-empted to process another event at line 3. It executes line 3 `pending.push(document.getElementById("textBox").value);` and adds another value to pending array which is supposed to be processed by `processValues()` function. Now the previous event is resumed from line 8 and empties the `pending` array loosing the recently inserted value.
 
-There's a race condition in it, right? 
-
-Well, that might be true in C++ or some other language but not in javascript. Someone may have told you it's because javascript is single-threaded but that's not true. 
+There's a race condition, right? Well, that's true in many languages (C++, Java, etc) but not in javascript. Someone may have told you it's because javascript is single-threaded but that's not true either. 

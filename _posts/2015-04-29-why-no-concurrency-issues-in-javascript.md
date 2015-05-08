@@ -28,3 +28,5 @@ setInterval(function() {
 Suppose line 8 `processValues(pending)` gets executed and processes the pending values but before preceeding to next line it gets pre-empted to process another event at line 4. It executes line 4 `pending.push(document.getElementById("textBox").value);` and adds another value to pending array which is supposed to be processed by `processValues()` function. Now the previous event is resumed from line 9 and empties the `pending` array loosing the recently inserted value.
 
 There's a race condition, right? Well, that's true in many languages (C++, Java, etc) but not in javascript. Someone may have told you it's because javascript is single-threaded but that's not true either. 
+
+## That's because of a feature in javaascript called [Run-to-Completion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop.22Run-to-completion.22)

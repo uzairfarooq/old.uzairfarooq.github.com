@@ -29,4 +29,4 @@ Suppose line 8 `processValues(pending)` gets executed and processes the pending 
 
 There's a race condition, right? Well, that's true in many languages (C++, Java, etc) but not in javascript. Someone may have told you it's because javascript is single-threaded but that's not true either. 
 
-### That's because of a feature in javaascript called [Run-to-Completion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop.22Run-to-completion.22)
+#### That's because of a feature in javaascript called [Run-to-Completion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop.22Run-to-completion.22)

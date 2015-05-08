@@ -29,5 +29,5 @@ Suppose line 8 `processValues(pending)` gets executed and processes the pending 
 
 That's a race condition, right? Well, that's true in many languages (C++, Java, etc) but not in javascript. Someone may have told you it's because javascript is single-threaded but that's not true either. Even though javascript is single-threaded you can still have asynchronous code blocks i.e. ajax requests, timers etc (if you're interested to know how it handles asynchronous code blocks, see http://www.quora.com/How-does-a-single-thread-handle-asynchronous-code-in-JavaScript). Then how come it does not have concurrency issues?
 
-#### That's because of a feature in javascript called [Run-to-Completion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop.22Run-to-completion.22)
-
+#### That's because of a feature in javascript called [Run-to-Completion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop#.22Run-to-completion.22)
+In simple words, it guarrenties a
